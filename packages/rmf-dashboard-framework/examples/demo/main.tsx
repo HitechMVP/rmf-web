@@ -3,6 +3,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+import { createTheme } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
 import {
   InitialWindow,
@@ -60,6 +61,21 @@ const tasksWorkspace: InitialWindow[] = [
   { layout: { x: 8, y: 0, w: 5, h: 8 }, microApp: mapApp },
 ];
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#218DAE',
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        containedSecondary: { backgroundColor: '#C5C1C1' },
+      },
+    },
+  },
+});
+
 export default function App() {
   return (
     <RmfDashboard
@@ -69,6 +85,7 @@ export default function App() {
       helpLink="https://osrf.github.io/ros2multirobotbook/rmf-core.html"
       reportIssueLink="https://github.com/open-rmf/rmf-web/issues"
       resources={{ fleets: {}, logos: { header: '/resources/defaultLogo.png' } }}
+      themes={{ default: theme }}
       tasks={{
         allowedTasks: [
           { taskDefinitionId: 'patrol' },
