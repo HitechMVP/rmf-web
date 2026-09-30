@@ -9,6 +9,7 @@ allowBuilds:
   edgedriver: true
   esbuild: true
   geckodriver: true
+  protobufjs: true
 
 minimumReleaseAgeExclude:
   - '@puppeteer/browsers@3.2.1'
