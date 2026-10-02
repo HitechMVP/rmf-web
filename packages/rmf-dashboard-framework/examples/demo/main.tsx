@@ -23,7 +23,7 @@ import {
 import { StubAuthenticator } from 'rmf-dashboard-framework/services';
 
 const mapApp = createMapApp({
-  attributionPrefix: 'Open-RMF',
+  attributionPrefix: 'R&D Maruei',
   defaultMapLevel: 'L1',
   defaultRobotZoom: 20,
   defaultZoom: 6,
@@ -113,7 +113,7 @@ export default function App() {
           element: <Workspace initialWindows={tasksWorkspace} />,
         },
         {
-          name: 'Custom',
+          name: 'Overview',
           route: 'custom',
           element: (
             <LocallyPersistentWorkspace

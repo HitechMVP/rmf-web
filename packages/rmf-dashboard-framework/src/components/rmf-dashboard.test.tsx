@@ -33,7 +33,7 @@ describe('RmfDashboard', () => {
   };
 
   const mapApp = createMapApp({
-    attributionPrefix: 'Open-RMF',
+    attributionPrefix: 'R&D Maruei',
     defaultMapLevel: 'L1',
     defaultRobotZoom: 20,
     defaultZoom: 6,
